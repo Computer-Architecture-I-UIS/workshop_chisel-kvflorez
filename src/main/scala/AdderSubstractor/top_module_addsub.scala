@@ -5,7 +5,7 @@ import chisel3._
 import chisel3.util._
 
 //A 16-bit adder with carry in and carry out
-class top_module extends Module {
+class top_module_addsub extends Module {
   val io = IO(new Bundle {
     val A    = Input(UInt(32.W))
     val B    = Input(UInt(32.W))
@@ -18,7 +18,7 @@ class top_module extends Module {
  
  
   //XOR
-  val Sub32=Fill(32,Sub) //segun la cheatsheet esto funciona
+  val Sub32=Fill(32,io.Sub) //segun la cheatsheet esto funciona
   val b_xor_sub=io.B ^ Sub32
 
    //Adder for bits 0-15

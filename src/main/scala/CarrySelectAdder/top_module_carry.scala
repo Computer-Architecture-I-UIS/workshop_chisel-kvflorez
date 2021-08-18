@@ -24,7 +24,7 @@ class top_module_carry extends Module {
   Adder1.io.Cin := 0.U
   val s1 = Adder1.io.Sum
   // Adder bits 16-31 input 1
-  val Adder2 = Module(new adder1())
+  val Adder2 = Module(new add16())
   Adder2.io.A   := io.A(31,16)
   Adder2.io.B   := io.B(31,16)
   Adder2.io.Cin := 1.U
