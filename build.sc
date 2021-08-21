@@ -9,7 +9,7 @@ import mill.bsp._
 
 object workshop_chisel-kvflorez extends SbtModule { m =>
   override def millSourcePath = os.pwd
-  override def scalaVersion = "2.12.13"
+  override def scalaVersion = "2.12.10"
   override def scalacOptions = Seq(
     "-Xsource:2.11",
     "-language:reflectiveCalls",

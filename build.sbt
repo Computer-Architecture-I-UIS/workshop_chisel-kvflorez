@@ -30,9 +30,9 @@ version := "3.3.0"
 
 name := "workshop_chisel-kvflorez"
 
-scalaVersion := "2.12.13"
+scalaVersion := "2.12.10"
 
-crossScalaVersions := Seq("2.12.13", "2.11.12")
+crossScalaVersions := Seq("2.12.10", "2.11.12")
 
 scalacOptions ++= Seq("-deprecation", "-feature", "-unchecked", "-language:reflectiveCalls")
 
