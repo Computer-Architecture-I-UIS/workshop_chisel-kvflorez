@@ -1,35 +1,18 @@
-Chisel Project Template
+Workshop Chisel
 =======================
 
-You've done the [Chisel Bootcamp](https://github.com/freechipsproject/chisel-bootcamp), and now you
-are ready to start your own Chisel project.  The following procedure should get you started
-with a clean running [Chisel3](https://www.chisel-lang.org/) project.
+El ejercicio consiste en describir en Chisel los bloques Adder 2, Carry select adder y Adder substractor de la plataforma [HDLbits](https://hdlbits.01xz.net/wiki/Module_fadd)
 
-## Make your own Chisel3 project
+## Bloque Adder 2
 
-### Dependencies
+### Descripción bloque
+El bloque Adder 2 consiste en 3 módulos, el módulo `add1.scala` es un full adder de 1 bit, el cual realiza la suma y "carry-out" de las entradas "a", "b" y "cin", el módulo `add16.scala` es un full adder de 16 bit descrito a partir del `add1.scala`, cuya entrada "cin" es igual a 0 y su salida cout se ignora en la descripción del módulo `top_module.scala`. Este módulo realiza la suma binaria de "a"y "b" ambas entadas de 32 bits, y cuenta con una salida "sum" también de 32 bits.
 
-#### JDK 8 or newer
+> El bloque se muestra a continuación
 
-We recommend LTS releases Java 8 and Java 11. You can install the JDK as recommended by your operating system, or use the prebuilt binaries from [AdoptOpenJDK](https://adoptopenjdk.net/).
+![](https://github.com/Computer-Architecture-I-UIS/workshop_chisel-kvflorez/blob/main/adder2.png)
+### Descripción test
 
-#### SBT or mill
-
-SBT is the most common built tool in the Scala community. You can download it [here](https://www.scala-sbt.org/download.html).  
-mill is another Scala/Java build tool without obscure DSL like SBT. You can download it [here](https://github.com/com-lihaoyi/mill/releases)
-
-### How to get started
-
-#### Create a repository from the template
-
-This repository is a Github template. You can create your own repository from it by clicking the green `Use this template` in the top right.
-Please leave `Include all branches` **unchecked**; checking it will pollute the history of your new repository.
-For more information, see ["Creating a repository from a template"](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template).
-
-#### Wait for the template cleanup workflow to complete
-
-After using the template to create your own blank project, please wait a minute or two for the `Template cleanup` workflow to run which will removes some template-specific stuff from the repository (like the LICENSE).
-Refresh the repository page in your browser until you see a 2nd commit by `actions-user` titled `Template cleanup`.
 
 
 #### Clone your repository
