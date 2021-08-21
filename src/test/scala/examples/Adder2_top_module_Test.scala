@@ -12,10 +12,9 @@ class Adder2_top_module_Test(c: top_module) extends PeekPokeTester(c) {
   for (i<- 0 until 2) {
   	poke(c.io.A, inputs(i)._1)
   	poke(c.io.B, inputs(i)._2)
-  	//poke(c.io.Cin, inputs(i)._3)
   	step(1)
   	expect(c.io.Sum, outputs(i))
-  	//expect(c.io.Cout, outputs(i)._2)
+
   }
 
 }

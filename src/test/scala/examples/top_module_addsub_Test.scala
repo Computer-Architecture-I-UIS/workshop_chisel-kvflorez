@@ -5,8 +5,8 @@ import chisel3.util._
 import chisel3.iotesters.{ChiselFlatSpec, Driver, PeekPokeTester}
 
 class top_module_addsub_Test(c: top_module_addsub) extends PeekPokeTester(c) {
-  val inputs = List( (150, 50, 1), (150, 50, 0) )
-  val outputs = List( 100, 200)
+  val inputs = List( (90, 30, 1), (90, 30, 0) )
+  val outputs = List( 60, 120)
 
   //var i = 0
   for (i<- 0 until 2) {

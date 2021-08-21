@@ -9,9 +9,7 @@ class top_module extends Module {
   val io = IO(new Bundle {
     val A    = Input(UInt(32.W))
     val B    = Input(UInt(32.W))
- //   val Cin  = Input(UInt(1.W))
     val Sum  = Output(UInt(32.W))
- //   val Cout = Output(UInt(1.W))
   })
 
    //Adder for bits 0-15
@@ -27,6 +25,6 @@ class top_module extends Module {
   Adder1631.io.B := io.B(31,16)
   Adder1631.io.Cin := 0.U
   io.Sum := Cat(Adder1631.io.Sum, s015).asUInt
-//  io.Cout := Adder1631.io.Cout
+
 }
 

@@ -6,14 +6,17 @@ El ejercicio consiste en describir en Chisel los bloques Adder 2, Carry select a
 ## Bloque Adder 2
 
 ### Descripción bloque
-El bloque Adder 2 consiste en 3 módulos, el módulo `add1.scala` es un full adder de 1 bit, el cual realiza la suma y "carry-out" de las entradas "a", "b" y "cin", el módulo `add16.scala` es un full adder de 16 bit descrito a partir del `add1.scala`, cuya entrada "cin" es igual a 0 y su salida cout se ignora en la descripción del módulo `top_module.scala`. Este módulo realiza la suma binaria de "a"y "b" ambas entadas de 32 bits, y cuenta con una salida "sum" también de 32 bits.
+El bloque Adder 2 consiste en 3 módulos, el módulo `add1.scala` es un full adder de 1 bit, el cual realiza la suma y "carry-out" de las entradas "a", "b" y "cin", el módulo `add16.scala` es un full adder de 16 bit descrito a partir del `add1.scala`, cuya entrada "cin" es igual a 0 y su salida cout se ignora en la descripción del módulo `top_module.scala`. Este módulo realiza la suma binaria de "a"y "b" ambas entradas de 32 bits, y cuenta con una salida "sum" también de 32 bits.
 
 > El bloque se muestra a continuación
 
 ![](https://github.com/Computer-Architecture-I-UIS/workshop_chisel-kvflorez/blob/main/adder2.png)
 ### Descripción test
-
-
+El test realiza dos pruebas:
+### Prueba 1
+A=50, B=60  -> El bloque funciona correctamente si sum=110
+### Prueba 2
+A=20, B=30  --> El bloque funciona correctamente si sum=50
 
 ### ¿Cómo ejecutar la simulación?
 
@@ -38,13 +41,17 @@ gtkwave test_run_dir/examples/top_module/top_module.vcdr
 ## Bloque Carry select adder
 
 ### Descripción bloque
-El bloque Carry select adder consiste en 3 módulos, el módulo `add1.scala` es un full adder de 1 bit, el cual realiza la suma y "carry-out" de las entradas "a", "b" y "cin", el módulo `add16.scala` es un full adder de 16 bit descrito a partir del `add1.scala`. El módulo `top_module_carry` tiene una mejora respecto al `top_module.scala` ya que la segunda etapa del sumador se duplica, y la entrada "cin" de uno es 0 y del otro 1. Las salidas de estos dos módulos se conectan a un MUX2-1 lo cual permite que la suma sea más rápida, y obtener la salida "sum" del módulo `top_module_carry` sin retraso.
+El bloque Carry select adder consiste en 3 módulos, el módulo `add1.scala` es un full adder de 1 bit, el cual realiza la suma y "carry-out" de las entradas "a", "b" y "cin", el módulo `add16.scala` es un full adder de 16 bit descrito a partir del `add1.scala`. El módulo `top_module_carry` tiene una mejora respecto al `top_module.scala` ya que la segunda etapa del sumador se duplica, y la entrada "cin" de uno es 0 y del otro 1. Las salidas de estos dos módulos se conectan a un MUX2-1 lo cual permite que la suma sea más rápida, y obtener la salida "sum" del módulo `top_module_carry`.
 
 > El bloque se muestra a continuación
 
 ![](https://github.com/Computer-Architecture-I-UIS/workshop_chisel-kvflorez/blob/main/carry.png)
 ### Descripción test
-
+El test realiza dos pruebas:
+### Prueba 1
+A=50, B=60  -> El bloque funciona correctamente si sum=110
+### Prueba 2
+A=20, B=30  --> El bloque funciona correctamente si sum=50
 
 
 ### ¿Cómo ejecutar la simulación?
@@ -76,7 +83,11 @@ El bloque Adder substractor consiste en 3 módulos, el módulo `add1.scala` es u
 
 ![](https://github.com/Computer-Architecture-I-UIS/workshop_chisel-kvflorez/blob/main/addsub.png)
 ### Descripción test
-
+El test realiza dos pruebas:
+### Prueba 1
+A=90, B=30, Sub=1  -> El bloque funciona correctamente si sum=60, ya que se está realizando una resta
+### Prueba 2
+A=90, B=30, Sub=0  --> El bloque funciona correctamente si sum=120, ya que se está realizando una suma
 
 
 ### ¿Cómo ejecutar la simulación?

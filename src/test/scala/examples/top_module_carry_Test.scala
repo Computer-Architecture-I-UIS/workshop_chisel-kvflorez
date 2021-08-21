@@ -5,8 +5,8 @@ import chisel3.util._
 import chisel3.iotesters.{ChiselFlatSpec, Driver, PeekPokeTester}
 
 class top_module_carry_Test(c: top_module_carry) extends PeekPokeTester(c) {
-  val inputs = List( (35000, 36000), (35000, 70000) )
-  val outputs = List(71000, 105000)
+  val inputs = List( (50, 60), (20, 30) )
+  val outputs = List(110, 50)
 
   //var i = 0
   for (i<- 0 until 2) {
