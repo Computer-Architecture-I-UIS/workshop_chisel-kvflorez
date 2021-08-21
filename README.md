@@ -26,7 +26,7 @@ A=20, B=30  --> El bloque funciona correctamente si sum=50
 ./run-examples.sh top_module
 ```
 >La simulación funciona si en el terminal puede leer las palabras "Success" y el número de ciclos probados.
-aqui va la foto
+![](https://github.com/Computer-Architecture-I-UIS/workshop_chisel-kvflorez/blob/main/test1.png)
 
 3. Si quiere crear un archivo .v a partir del .scala utilice el siguiente comando
 ```sh
@@ -62,7 +62,7 @@ A=20, B=30  --> El bloque funciona correctamente si sum=50
 ./run-examples.sh top_module_carry
 ```
 >La simulación funciona si en el terminal puede leer las palabras "Success" y el número de ciclos probados.
-aqui va la foto
+![](https://github.com/Computer-Architecture-I-UIS/workshop_chisel-kvflorez/blob/main/test2.png)
 
 3. Si quiere crear un archivo .v a partir del .scala utilice el siguiente comando
 ```sh
@@ -98,7 +98,7 @@ A=90, B=30, Sub=0  --> El bloque funciona correctamente si sum=120, ya que se es
 ./run-examples.sh top_module_addsub
 ```
 >La simulación funciona si en el terminal puede leer las palabras "Success" y el número de ciclos probados.
-aqui va la foto
+![](https://github.com/Computer-Architecture-I-UIS/workshop_chisel-kvflorez/blob/main/test3.png)
 
 3. Si quiere crear un archivo .v a partir del .scala utilice el siguiente comando
 ```sh
