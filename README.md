@@ -15,16 +15,26 @@ El bloque Adder 2 consiste en 3 módulos, el módulo `add1.scala` es un full add
 
 
 
-#### Clone your repository
+### ¿Cómo ejecutar la simulación?
 
-Once you have created a repository from this template and the `Template cleanup` workflow has completed, you can click the green button to get a link for cloning your repository.
-Note that it is easiest to push to a repository if you set up SSH with Github, please see the [related documentation](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh). SSH is required for pushing to a Github repository when using two-factor authentication.
-
+1. Clonar el repositorio `workshop_chisel-kvflorez`
+2. Dentro de la carpeta abrir un terminal y ejecutar el siguiente comando
 ```sh
-git clone git@github.com:Computer-Architecture-I-UIS/workshop_chisel-kvflorez.git
-cd workshop_chisel-kvflorez
+./run-examples.sh top_module
 ```
+>La simulación funciona si en el terminal puede leer las palabras "Success" y el número de ciclos probados.
+aqui va la foto
 
+3. Si quiere crear un archivo .v a partir del .scala utilice el siguiente comando
+```sh
+./run-examples.sh top_module --backend-name verilator
+
+```
+4. Para observar la simulación en gtkwave utilice el siguiente comando
+```sh
+gtkwave test_run_dir/examples/top_module/top_module.vcdr
+
+```
 #### Set project organization and name in build.sbt
 
 The cleanup workflow will have attempted to provide sensible defaults for `ThisBuild / organization` and `name` in the `build.sbt`.
