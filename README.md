@@ -35,7 +35,7 @@ A=20, B=30  --> El bloque funciona correctamente si sum=50
 ```
 4. Para observar la simulación en gtkwave utilice el siguiente comando
 ```sh
-gtkwave test_run_dir/examples/top_module/top_module.vcdr
+gtkwave test_run_dir/examples/top_module/top_module.vcd
 
 ```
 ## Bloque Carry select adder
@@ -71,7 +71,7 @@ A=20, B=30  --> El bloque funciona correctamente si sum=50
 ```
 4. Para observar la simulación en gtkwave utilice el siguiente comando
 ```sh
-gtkwave test_run_dir/examples/top_module_carry/top_module.vcdr
+gtkwave test_run_dir/examples/top_module_carry/top_module.vcd
 
 ```
 ## Bloque Adder substractor
@@ -107,6 +107,6 @@ A=90, B=30, Sub=0  --> El bloque funciona correctamente si sum=120, ya que se es
 ```
 4. Para observar la simulación en gtkwave utilice el siguiente comando
 ```sh
-gtkwave test_run_dir/examples/top_module_addsub/top_module.vcdr
+gtkwave test_run_dir/examples/top_module_addsub/top_module.vcd
 
 ```
