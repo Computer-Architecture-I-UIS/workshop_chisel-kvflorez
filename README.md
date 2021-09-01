@@ -71,7 +71,7 @@ A=20, B=30  --> El bloque funciona correctamente si sum=50
 ```
 4. Para observar la simulación en gtkwave utilice el siguiente comando
 ```sh
-gtkwave test_run_dir/examples/top_module_carry/top_module.vcd
+gtkwave test_run_dir/examples/top_module_carry/top_module_carry.vcd
 
 ```
 ## Bloque Adder substractor
@@ -102,11 +102,11 @@ A=90, B=30, Sub=0  --> El bloque funciona correctamente si sum=120, ya que se es
 
 3. Si quiere crear un archivo .v a partir del .scala utilice el siguiente comando
 ```sh
-./run-examples.sh top_module_addsub--backend-name verilator
+./run-examples.sh top_module_addsub --backend-name verilator
 
 ```
 4. Para observar la simulación en gtkwave utilice el siguiente comando
 ```sh
-gtkwave test_run_dir/examples/top_module_addsub/top_module.vcd
+gtkwave test_run_dir/examples/top_module_addsub/top_module_addsub.vcd
 
 ```
